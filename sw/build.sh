@@ -1,6 +1,7 @@
 #!/bin/sh
 export PATH=$PATH:/opt/Xilinx/SDK/2017.4/bin/
 echo Building DTS
+mkdir -p sdk
 cd sdk
 hsi -nojournal -nolog -mode batch -source ../buildsoftware.tcl
 rm *.jou
