@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Root MajorVersion="0" MinorVersion="33">
-  <CompositeFile CompositeFileTopName="mainsoc" CanBeSetAsTop="true" CanDisplayChildGraph="true">
+  <CompositeFile CompositeFileTopName="mainsoc" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1514448403"/>
-    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1514448403"/>
-    <Generation Name="SIMULATION" State="RESET" Timestamp="1514448403"/>
-    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1514448403"/>
+    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1514484828"/>
+    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1514484828"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1514484828"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1514484828"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/mainsoc_microblaze_0_0/mainsoc_microblaze_0_0.xci" Type="IP">
         <Instance HierarchyPath="microblaze_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/mainsoc_mig_7series_0_0/mainsoc_mig_7series_0_0.xci" Type="IP">
+        <Instance HierarchyPath="mig_7series_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/mainsoc_clk_wiz_0_0/mainsoc_clk_wiz_0_0.xci" Type="IP">
+        <Instance HierarchyPath="clk_wiz_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -47,88 +63,40 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/mainsoc_clk_wiz_1_0/mainsoc_clk_wiz_1_0.xci" Type="IP">
-        <Instance HierarchyPath="clockgen"/>
+      <File Name="ip/mainsoc_rst_clk_wiz_0_150M_0/mainsoc_rst_clk_wiz_0_150M_0.xci" Type="IP">
+        <Instance HierarchyPath="rst_clk_wiz_0_150M"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/mainsoc_rst_clk_wiz_1_100M_0/mainsoc_rst_clk_wiz_1_100M_0.xci" Type="IP">
-        <Instance HierarchyPath="rst_clk_wiz_1_100M"/>
+      <File Name="ip/mainsoc_axi_smc_0/mainsoc_axi_smc_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_smc"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/mainsoc_mig_7series_0_0/mainsoc_mig_7series_0_0.xci" Type="IP">
-        <Instance HierarchyPath="main_memory"/>
+      <File Name="ip/mainsoc_rst_mig_7series_0_200M_0/mainsoc_rst_mig_7series_0_200M_0.xci" Type="IP">
+        <Instance HierarchyPath="rst_mig_7series_0_200M"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/mainsoc_rst_mig_7series_0_100M_0/mainsoc_rst_mig_7series_0_100M_0.xci" Type="IP">
-        <Instance HierarchyPath="rst_mig_7series_0_100M"/>
+      <File Name="ip/mainsoc_axi_gpio_0_0/mainsoc_axi_gpio_0_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_gpio_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/mainsoc_xbar_0/mainsoc_xbar_0.xci" Type="IP">
-        <Instance HierarchyPath="microblaze_0_axi_periph/xbar"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/mainsoc_dlmb_v10_0/mainsoc_dlmb_v10_0.xci" Type="IP">
-        <Instance HierarchyPath="local_memory/dlmb_v10"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/mainsoc_ilmb_v10_0/mainsoc_ilmb_v10_0.xci" Type="IP">
-        <Instance HierarchyPath="local_memory/ilmb_v10"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/mainsoc_dlmb_bram_if_cntlr_0/mainsoc_dlmb_bram_if_cntlr_0.xci" Type="IP">
-        <Instance HierarchyPath="local_memory/dlmb_bram_if_cntlr"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/mainsoc_ilmb_bram_if_cntlr_0/mainsoc_ilmb_bram_if_cntlr_0.xci" Type="IP">
-        <Instance HierarchyPath="local_memory/ilmb_bram_if_cntlr"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/mainsoc_lmb_bram_0/mainsoc_lmb_bram_0.xci" Type="IP">
-        <Instance HierarchyPath="local_memory/lmb_bram"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/mainsoc_axi_quad_spi_0_0/mainsoc_axi_quad_spi_0_0.xci" Type="IP">
-        <Instance HierarchyPath="flash"/>
+      <File Name="ip/mainsoc_axi_gpio_1_0/mainsoc_axi_gpio_1_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_gpio_1"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -136,7 +104,55 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/mainsoc_axi_uartlite_0_0/mainsoc_axi_uartlite_0_0.xci" Type="IP">
-        <Instance HierarchyPath="uart"/>
+        <Instance HierarchyPath="axi_uartlite_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/mainsoc_dlmb_v10_0/mainsoc_dlmb_v10_0.xci" Type="IP">
+        <Instance HierarchyPath="microblaze_0_local_memory/dlmb_v10"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/mainsoc_ilmb_v10_0/mainsoc_ilmb_v10_0.xci" Type="IP">
+        <Instance HierarchyPath="microblaze_0_local_memory/ilmb_v10"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/mainsoc_dlmb_bram_if_cntlr_0/mainsoc_dlmb_bram_if_cntlr_0.xci" Type="IP">
+        <Instance HierarchyPath="microblaze_0_local_memory/dlmb_bram_if_cntlr"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/mainsoc_ilmb_bram_if_cntlr_0/mainsoc_ilmb_bram_if_cntlr_0.xci" Type="IP">
+        <Instance HierarchyPath="microblaze_0_local_memory/ilmb_bram_if_cntlr"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/mainsoc_lmb_bram_0/mainsoc_lmb_bram_0.xci" Type="IP">
+        <Instance HierarchyPath="microblaze_0_local_memory/lmb_bram"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/mainsoc_axi_timer_0_0/mainsoc_axi_timer_0_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_timer_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -144,7 +160,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/mainsoc_axi_ethernetlite_0_0/mainsoc_axi_ethernetlite_0_0.xci" Type="IP">
-        <Instance HierarchyPath="ethernet"/>
+        <Instance HierarchyPath="axi_ethernetlite_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -159,14 +175,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/mainsoc_axi_quad_spi_0_1/mainsoc_axi_quad_spi_0_1.xci" Type="IP">
-        <Instance HierarchyPath="sdcard"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip/mainsoc_interrupt_demo_0_0/mainsoc_interrupt_demo_0_0.xci" Type="IP">
         <Instance HierarchyPath="interrupt_demo_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -175,96 +183,24 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/mainsoc_axi_gpio_0_0/mainsoc_axi_gpio_0_0.xci" Type="IP">
-        <Instance HierarchyPath="leds"/>
+      <File Name="ip/mainsoc_axi_quad_spi_0_0/mainsoc_axi_quad_spi_0_0.xci" Type="IP">
+        <Instance HierarchyPath="sdcard"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/mainsoc_axi_gpio_1_0/mainsoc_axi_gpio_1_0.xci" Type="IP">
-        <Instance HierarchyPath="btn_sw"/>
+      <File Name="ip/mainsoc_axi_quad_spi_0_1/mainsoc_axi_quad_spi_0_1.xci" Type="IP">
+        <Instance HierarchyPath="flash"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/mainsoc_auto_pc_7/mainsoc_auto_pc_7.xci" Type="IP">
-        <Instance HierarchyPath="microblaze_0_axi_periph/m08_couplers/auto_pc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/mainsoc_auto_pc_6/mainsoc_auto_pc_6.xci" Type="IP">
-        <Instance HierarchyPath="microblaze_0_axi_periph/m07_couplers/auto_pc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/mainsoc_auto_pc_5/mainsoc_auto_pc_5.xci" Type="IP">
-        <Instance HierarchyPath="microblaze_0_axi_periph/m06_couplers/auto_pc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/mainsoc_auto_pc_4/mainsoc_auto_pc_4.xci" Type="IP">
-        <Instance HierarchyPath="microblaze_0_axi_periph/m05_couplers/auto_pc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/mainsoc_auto_pc_3/mainsoc_auto_pc_3.xci" Type="IP">
-        <Instance HierarchyPath="microblaze_0_axi_periph/m04_couplers/auto_pc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/mainsoc_auto_pc_2/mainsoc_auto_pc_2.xci" Type="IP">
-        <Instance HierarchyPath="microblaze_0_axi_periph/m03_couplers/auto_pc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/mainsoc_auto_pc_1/mainsoc_auto_pc_1.xci" Type="IP">
-        <Instance HierarchyPath="microblaze_0_axi_periph/m02_couplers/auto_pc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/mainsoc_auto_cc_0/mainsoc_auto_cc_0.xci" Type="IP">
-        <Instance HierarchyPath="microblaze_0_axi_periph/m01_couplers/auto_cc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/mainsoc_auto_pc_0/mainsoc_auto_pc_0.xci" Type="IP">
-        <Instance HierarchyPath="microblaze_0_axi_periph/m00_couplers/auto_pc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/mainsoc_auto_pc_8/mainsoc_auto_pc_8.xci" Type="IP">
-        <Instance HierarchyPath="microblaze_0_axi_periph/s00_couplers/auto_pc"/>
+      <File Name="ip/mainsoc_xbar_0/mainsoc_xbar_0.xci" Type="IP">
+        <Instance HierarchyPath="microblaze_0_axi_periph/xbar"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

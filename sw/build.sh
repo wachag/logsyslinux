@@ -1,5 +1,5 @@
 #!/bin/sh
-export PATH=$PATH:/opt/Xilinx/SDK/2017.4/bin/
+export PATH=$PATH:/opt/Xilinx/SDK/2017.3/bin/
 echo Building DTS
 mkdir -p sdk
 cd sdk
@@ -9,6 +9,7 @@ rm *.log
 rm *.mss
 rm -rf drivers
 rm -rf .Xil
+dtc ../linux.dts -O dtb > ../linux.dtb
 echo Building rootfs and kernel
 cd ../buildroot
 cp ../buildrootconfig ./.config
