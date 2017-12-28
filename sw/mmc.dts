@@ -1,0 +1,10 @@
+&sdcard { 	
+  mmc_spi@0 {
+    #address-cells = <1>;
+    #size-cells=<1>;
+    compatible = "mmc-spi-slot";
+    spi-max-frequency = < 2000000 >;
+    reg = <0 0>;
+    voltage-ranges = < 3300 3300 >;
+  };
+};

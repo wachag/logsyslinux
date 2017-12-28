@@ -1,0 +1,1 @@
+write_cfgmem -force -format mcs -size 64 -interface SPIx4 -loadbit {up 0x00000000 "../../linuxsystem.bit" } -loaddata {up 0x002E0000 "../../sw/buildroot/output/images/simpleImage.linux.srec" } -file "../../linuxsystem.mcs"
