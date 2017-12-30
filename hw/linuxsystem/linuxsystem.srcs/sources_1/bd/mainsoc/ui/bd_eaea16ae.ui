@@ -11,12 +11,12 @@ preplace port rs232_uart -pg 1 -y 810 -defaultsOSRD
 preplace port push_buttons_4bits -pg 1 -y 1060 -defaultsOSRD
 preplace port RGMII_0 -pg 1 -y 380 -defaultsOSRD
 preplace port sdcard -pg 1 -y 1370 -defaultsOSRD
-preplace port mdio_rtl -pg 1 -y 510 -defaultsOSRD
 preplace port reset -pg 1 -y 840 -defaultsOSRD
+preplace port mdio_rtl -pg 1 -y 510 -defaultsOSRD
+preplace inst flashctl -pg 1 -lvl 7 -y 1220 -defaultsOSRD
 preplace inst mig_7series_0 -pg 1 -lvl 7 -y 230 -defaultsOSRD
 preplace inst axi_smc -pg 1 -lvl 6 -y 280 -defaultsOSRD
 preplace inst microblaze_0_axi_periph -pg 1 -lvl 5 -y 990 -defaultsOSRD
-preplace inst flash -pg 1 -lvl 7 -y 1220 -defaultsOSRD
 preplace inst axi_timer_0 -pg 1 -lvl 6 -y 820 -defaultsOSRD
 preplace inst axi_gpio_0 -pg 1 -lvl 7 -y 950 -defaultsOSRD
 preplace inst microblaze_0_xlconcat -pg 1 -lvl 2 -y 560 -defaultsOSRD
@@ -35,18 +35,18 @@ preplace inst interrupt_demo_0 -pg 1 -lvl 6 -y 640 -defaultsOSRD
 preplace inst rst_clk_wiz_0_150M -pg 1 -lvl 2 -y 810 -defaultsOSRD
 preplace netloc mig_7series_0_mmcm_locked 1 5 3 1960 570 NJ 570 2750
 preplace netloc rst_clk_wiz_0_150M_interconnect_aresetn 1 2 3 720J 810 NJ 810 N
-preplace netloc microblaze_0_axi_periph_M08_AXI 1 5 2 N 1070 2370J
 preplace netloc flash_SPI_0 1 7 1 NJ
-preplace netloc microblaze_0_axi_periph_M04_AXI 1 5 1 1950
 preplace netloc axi_ethernetlite_0_MDIO 1 6 2 2410J 510 NJ
-preplace netloc clk_wiz_0_locked 1 1 1 N
+preplace netloc microblaze_0_axi_periph_M08_AXI 1 5 2 N 1070 2370J
+preplace netloc microblaze_0_axi_periph_M04_AXI 1 5 1 1950
+preplace netloc clk_wiz_0_locked 1 1 1 230
 preplace netloc mig_7series_0_DDR3 1 7 1 NJ
 preplace netloc axi_uartlite_0_interrupt 1 1 7 310 430 NJ 430 NJ 430 1540J 540 NJ 540 NJ 540 2720
 preplace netloc microblaze_0_intr 1 2 1 690
 preplace netloc sdcard_ip2intc_irpt 1 1 7 260 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 2720
 preplace netloc interrupt_demo_0_irq 1 1 6 270 720 NJ 720 1020J 710 NJ 710 NJ 710 2390
-preplace netloc rst_clk_wiz_0_150M_peripheral_aresetn 1 2 5 710 850 NJ 850 1550 1270 1910 980 2420
-preplace netloc microblaze_0_Clk 1 1 6 240 680 680 450 1020 450 1590 570 1940 920 2410
+preplace netloc rst_clk_wiz_0_150M_peripheral_aresetn 1 2 5 710 850 NJ 850 1550 1270 1930 980 2420
+preplace netloc microblaze_0_Clk 1 1 6 230 680 680 450 1020 450 1590 570 1920 920 2410
 preplace netloc microblaze_0_axi_periph_M06_AXI 1 5 1 1960
 preplace netloc microblaze_0_axi_periph_M03_AXI 1 5 2 N 970 2400J
 preplace netloc axi_smc_M00_AXI 1 6 1 2400
@@ -56,11 +56,11 @@ preplace netloc microblaze_0_M_AXI_DC 1 4 2 1560J 240 N
 preplace netloc microblaze_0_ilmb_1 1 4 1 1580
 preplace netloc rst_mig_7series_0_200M_peripheral_aresetn 1 6 1 2420
 preplace netloc sys_clock_1 1 0 1 NJ
-preplace netloc microblaze_0_axi_periph_M05_AXI 1 5 1 1930
 preplace netloc rgmii_to_mii_0_RGMII 1 7 1 NJ
 preplace netloc axi_gpio_1_GPIO2 1 7 1 NJ
+preplace netloc microblaze_0_axi_periph_M05_AXI 1 5 1 1940
 preplace netloc microblaze_0_axi_dp 1 4 1 1550
-preplace netloc mig_7series_0_ui_clk 1 5 3 1900 10 NJ 10 2770
+preplace netloc mig_7series_0_ui_clk 1 5 3 1920 10 NJ 10 2770
 preplace netloc rst_clk_wiz_0_150M_mb_reset 1 2 2 670 250 1010J
 preplace netloc microblaze_0_axi_periph_M01_AXI 1 5 2 NJ 930 N
 preplace netloc microblaze_0_M_AXI_IC 1 4 2 1570J 260 N
@@ -71,24 +71,24 @@ preplace netloc axi_gpio_0_GPIO 1 7 1 NJ
 preplace netloc axi_gpio_0_ip2intc_irpt 1 1 7 280 420 NJ 420 NJ 420 1560J 520 NJ 520 NJ 520 2770
 preplace netloc axi_ethernetlite_0_ip2intc_irpt 1 1 6 260 410 NJ 410 NJ 410 1570J 510 NJ 510 2390
 preplace netloc mig_7series_0_ui_clk_sync_rst 1 5 3 1950 530 NJ 530 2760
-preplace netloc clk_wiz_0_clk_out2 1 1 6 230J 440 NJ 440 NJ 440 1530J 530 1900J 370 2410
+preplace netloc clk_wiz_0_clk_out2 1 1 6 220J 440 NJ 440 NJ 440 1530J 530 1900J 370 2410
 preplace netloc microblaze_0_axi_periph_M07_AXI 1 5 2 N 1050 2380J
 preplace netloc microblaze_0_axi_periph_M02_AXI 1 5 2 N 950 2390J
 preplace netloc microblaze_0_dlmb_1 1 4 1 1590
 preplace netloc sdcard_SPI_0 1 7 1 NJ
-preplace netloc axi_ethernetlite_0_MII 1 6 1 NJ
 preplace netloc axi_gpio_1_GPIO 1 7 1 NJ
+preplace netloc axi_ethernetlite_0_MII 1 6 1 NJ
 preplace netloc microblaze_0_debug 1 3 1 N
 preplace netloc flash_ip2intc_irpt 1 1 7 300 710 NJ 710 1010J 560 NJ 560 NJ 560 NJ 560 2730
 preplace netloc mdm_1_debug_sys_rst 1 1 3 250 370 NJ 370 980
-preplace netloc reset_1 1 0 7 20 780 220 190 NJ 190 NJ 190 NJ 190 NJ 190 2390
-preplace netloc axi_timer_0_interrupt 1 1 6 290 700 NJ 700 NJ 700 NJ 700 1920J 720 2390
+preplace netloc reset_1 1 0 7 20 780 240 190 NJ 190 NJ 190 NJ 190 NJ 190 2390
+preplace netloc axi_timer_0_interrupt 1 1 6 290 700 NJ 700 NJ 700 NJ 700 1910J 720 2390
 levelinfo -pg 1 0 120 490 850 1290 1760 2190 2580 2790 -top 0 -bot 1460
 ",
 }
 {
    da_axi4_cnt: "9",
    da_board_cnt: "2",
-   da_clkrst_cnt: "2",
+   da_clkrst_cnt: "3",
    da_mb_cnt: "1",
 }

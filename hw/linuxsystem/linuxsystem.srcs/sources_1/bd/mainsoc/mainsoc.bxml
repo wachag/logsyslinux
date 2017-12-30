@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="mainsoc" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1514484828"/>
-    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1514484828"/>
-    <Generation Name="SIMULATION" State="RESET" Timestamp="1514484828"/>
-    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1514484828"/>
+    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1514653383"/>
+    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1514653383"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1514653383"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1514653383"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/mainsoc_microblaze_0_0/mainsoc_microblaze_0_0.xci" Type="IP">
         <Instance HierarchyPath="microblaze_0"/>
@@ -192,7 +192,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/mainsoc_axi_quad_spi_0_1/mainsoc_axi_quad_spi_0_1.xci" Type="IP">
-        <Instance HierarchyPath="flash"/>
+        <Instance HierarchyPath="flashctl"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

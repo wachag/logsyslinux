@@ -65,7 +65,7 @@
 /config/ip/num_clks/value=2
 /config/aclk/csk/value=mainsoc_mig_7series_0_0_ui_clk:200:0
 /clocking/M00_Exit/ASSOCIATED_CLK/value=aclk;range=aclk;editable=0
-/config/aclk1/csk/value=_clk_wiz_0_clk_out1:150:0.0
+/config/aclk1/csk/value=_clk_wiz_0_clk_out1:100:0.0
 /clocking/S00_Entry/ASSOCIATED_CLK/value=aclk1;range=aclk1;editable=0
 /clocking/S01_Entry/ASSOCIATED_CLK/value=aclk1;range=aclk1;editable=0
 /clocking/SW0/ASSOCIATED_CLK/value=aclk;range=aclk,aclk1;strength=0

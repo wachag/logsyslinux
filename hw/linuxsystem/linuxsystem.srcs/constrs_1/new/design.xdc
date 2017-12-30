@@ -53,9 +53,9 @@ set_property BITSTREAM.CONFIG.SPI_FALL_EDGE YES [current_design]
 set_property BITSTREAM.CONFIG.UNUSEDPIN PULLNONE [current_design]
 set_property CONFIG_MODE SPIx4 [current_design]
 
-
-
 set_property IOSTANDARD LVCMOS33 [get_ports flash_spi_io2_io]
 set_property IOSTANDARD LVCMOS33 [get_ports flash_spi_io3_io]
 set_property PACKAGE_PIN B22 [get_ports flash_spi_io2_io]
 set_property PACKAGE_PIN A22 [get_ports flash_spi_io3_io]
+
+create_clock -period 40.000 -name rgmii_rx_clk -waveform {0.000 20.000} [get_ports RGMII_0_RXC]
