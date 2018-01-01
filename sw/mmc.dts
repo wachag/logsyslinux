@@ -1,24 +1,43 @@
 &sdcard { 	
   mmc_spi@0 {
-    #address-cells = <1>;
-    #size-cells=<1>;
     compatible = "mmc-spi-slot";
     spi-max-frequency = < 2000000 >;
-    reg = <0 0>;
+    reg = <0>;
     voltage-ranges = < 3300 3300 >;
   };
 };
 &flashctl {
   flash@0 {
-    compatible = "micron,n25q512ax3", "jedec,spi-nor";
+    compatible = "micron,n25q512ax3", "jedec,spi-nor", "st,n25q512ax3", "n25q512ax3", "spi-nor", "n25q512a", "micron,n25q512a","st,n25q512a";
     reg = <0x0>;
     spi-max-frequency = <25000000>;
     m25p,fast-read;
     #address-cells = <1>;
     #size-cells = <1>;
-    partition@main {
-      label = "spi-flash";
-      reg = <0x002e0000 0x10000000>;
+    partitions{
+      compatible = "fixed-partitions";
+      #address-cells = <1>;
+      #size-cells = <1>;
+      partition@0x002e0000 {
+        label = "spi-flash";
+        reg = <0x002e0000 0x10000000>;
+      };
     };
   };
+};
+&axi_ethernetlite_0 {
+  phy-handle = <&phy0>;
+};
+
+&axi_ethernetlite_0_mdio {
+	#address-cells = <1>;
+	#size-cells = <0>;
+	phy0: phy@0 {
+		reg = <0>;
+		compatible = "ti,dp83867";
+		device_type = "ethernet-phy";
+		ti,rx-internal-delay = <0x1>;
+		ti,tx-internal-delay = <0x1>;
+		ti,fifo-depth = <0x00>;
+	};
 };

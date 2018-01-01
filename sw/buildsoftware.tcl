@@ -5,5 +5,5 @@ create_sw_design dts -proc microblaze_0 -os device_tree
 generate_bsp
 generate_target
 exec cat system-top.dts system.dts ../mmc.dts > linux.dts
-#exec cat system-top.dts ../mmc.dts > linux.dts
+exec cat system-top.dts ../mmc.dts > linux.dts
 exec dtc -o ../linux.dts -O dts linux.dts
