@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2018.02-git-00530-gd6681eeb8f Configuration
+# Buildroot 2018.02-git-00794-g3383170b72 Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 BR2_HOST_GCC_AT_LEAST_4_5=y
@@ -146,7 +146,7 @@ BR2_TOOLCHAIN_BUILDROOT_LIBC="uclibc"
 # BR2_KERNEL_HEADERS_4_13 is not set
 BR2_KERNEL_HEADERS_4_14=y
 # BR2_KERNEL_HEADERS_VERSION is not set
-BR2_DEFAULT_KERNEL_HEADERS="4.14.10"
+BR2_DEFAULT_KERNEL_HEADERS="4.14.14"
 BR2_PACKAGE_LINUX_HEADERS=y
 
 #
@@ -324,7 +324,7 @@ BR2_LINUX_KERNEL_LATEST_VERSION=y
 # BR2_LINUX_KERNEL_CUSTOM_GIT is not set
 # BR2_LINUX_KERNEL_CUSTOM_HG is not set
 # BR2_LINUX_KERNEL_CUSTOM_SVN is not set
-BR2_LINUX_KERNEL_VERSION="4.14.10"
+BR2_LINUX_KERNEL_VERSION="4.14.14"
 BR2_LINUX_KERNEL_PATCH=""
 # BR2_LINUX_KERNEL_USE_DEFCONFIG is not set
 # BR2_LINUX_KERNEL_USE_ARCH_DEFAULT_CONFIG is not set
@@ -750,7 +750,10 @@ BR2_PACKAGE_MTD_UBIBLOCK=y
 # mtools needs a toolchain w/ wchar
 #
 # BR2_PACKAGE_NFS_UTILS is not set
-# BR2_PACKAGE_NILFS_UTILS is not set
+
+#
+# nilfs-utils needs a toolchain w/ threads, NPTL
+#
 
 #
 # ntfs-3g needs a toolchain w/ wchar, threads, dynamic library
@@ -968,7 +971,6 @@ BR2_PACKAGE_MTD_UBIBLOCK=y
 # BR2_PACKAGE_DVB_APPS is not set
 # BR2_PACKAGE_DVBSNOOP is not set
 # BR2_PACKAGE_EDID_DECODE is not set
-# BR2_PACKAGE_EEPROG is not set
 
 #
 # eudev needs eudev /dev management
@@ -1274,6 +1276,7 @@ BR2_PACKAGE_OPENAL_ARCH_SUPPORTS=y
 #
 # BR2_PACKAGE_SZIP is not set
 # BR2_PACKAGE_ZLIB is not set
+BR2_PACKAGE_PROVIDES_HOST_ZLIB="host-libzlib"
 
 #
 # Crypto
@@ -1732,6 +1735,10 @@ BR2_PACKAGE_PROVIDES_HOST_OPENSSL="host-libopenssl"
 #
 # log4cxx needs a toolchain w/ C++, threads, dynamic library
 #
+
+#
+# opentracing-cpp needs a toolchain w/ C++, gcc >= 4.8
+#
 # BR2_PACKAGE_ZLOG is not set
 
 #
@@ -1872,6 +1879,10 @@ BR2_PACKAGE_PROVIDES_HOST_OPENSSL="host-libopenssl"
 # libcgicc needs a toolchain w/ C++
 #
 # BR2_PACKAGE_LIBCOAP is not set
+
+#
+# libcpprestsdk needs a toolchain w/ C++, wchar, threads
+#
 # BR2_PACKAGE_LIBCURL is not set
 # BR2_PACKAGE_LIBDNET is not set
 # BR2_PACKAGE_LIBEXOSIP2 is not set
@@ -2039,6 +2050,10 @@ BR2_PACKAGE_PROVIDES_HOST_OPENSSL="host-libopenssl"
 # elfutils needs a uClibc or glibc toolchain w/ wchar, dynamic library
 #
 # BR2_PACKAGE_FFTW is not set
+
+#
+# flatbuffers needs a toolchain w/ C++, gcc >= 4.7
+#
 
 #
 # gconf needs a toolchain w/ threads, wchar
@@ -2316,6 +2331,7 @@ BR2_PACKAGE_PROTOBUF_ARCH_SUPPORTS=y
 #
 # aircrack-ng needs a toolchain w/ threads, C++
 #
+# BR2_PACKAGE_AOETOOLS is not set
 # BR2_PACKAGE_APACHE is not set
 # BR2_PACKAGE_ARGUS is not set
 # BR2_PACKAGE_ARP_SCAN is not set
@@ -2378,6 +2394,10 @@ BR2_PACKAGE_PROTOBUF_ARCH_SUPPORTS=y
 
 #
 # cups needs a toolchain w/ C++, threads
+#
+
+#
+# cups-filters needs a toolchain w/ wchar, C++, threads and dynamic library, gcc >= 4.8
 #
 # BR2_PACKAGE_DANTE is not set
 # BR2_PACKAGE_DARKHTTPD is not set
@@ -2547,6 +2567,7 @@ BR2_PACKAGE_IFUPDOWN_SCRIPTS=y
 # BR2_PACKAGE_ODHCP6C is not set
 # BR2_PACKAGE_ODHCPLOC is not set
 # BR2_PACKAGE_OLSR is not set
+# BR2_PACKAGE_OPEN_LLDP is not set
 # BR2_PACKAGE_OPEN_PLC_UTILS is not set
 
 #
@@ -2973,9 +2994,10 @@ BR2_PACKAGE_UTIL_LINUX_LIBUUID=y
 # BR2_TARGET_ROOTFS_AXFS is not set
 # BR2_TARGET_ROOTFS_CLOOP is not set
 BR2_TARGET_ROOTFS_CPIO=y
-BR2_TARGET_ROOTFS_CPIO_NONE=y
+# BR2_TARGET_ROOTFS_CPIO_NONE is not set
 # BR2_TARGET_ROOTFS_CPIO_GZIP is not set
-# BR2_TARGET_ROOTFS_CPIO_BZIP2 is not set
+BR2_TARGET_ROOTFS_CPIO_BZIP2=y
+# BR2_TARGET_ROOTFS_CPIO_LZ4 is not set
 # BR2_TARGET_ROOTFS_CPIO_LZMA is not set
 # BR2_TARGET_ROOTFS_CPIO_LZO is not set
 # BR2_TARGET_ROOTFS_CPIO_XZ is not set
@@ -2994,9 +3016,10 @@ BR2_TARGET_ROOTFS_EXT2_SIZE="60M"
 BR2_TARGET_ROOTFS_EXT2_INODES=0
 BR2_TARGET_ROOTFS_EXT2_RESBLKS=5
 BR2_TARGET_ROOTFS_EXT2_MKFS_OPTIONS="-O ^64bit"
-BR2_TARGET_ROOTFS_EXT2_NONE=y
+# BR2_TARGET_ROOTFS_EXT2_NONE is not set
 # BR2_TARGET_ROOTFS_EXT2_GZIP is not set
-# BR2_TARGET_ROOTFS_EXT2_BZIP2 is not set
+BR2_TARGET_ROOTFS_EXT2_BZIP2=y
+# BR2_TARGET_ROOTFS_EXT2_LZ4 is not set
 # BR2_TARGET_ROOTFS_EXT2_LZMA is not set
 # BR2_TARGET_ROOTFS_EXT2_LZO is not set
 # BR2_TARGET_ROOTFS_EXT2_XZ is not set
@@ -3006,12 +3029,14 @@ BR2_TARGET_ROOTFS_INITRAMFS=y
 # BR2_TARGET_ROOTFS_SQUASHFS is not set
 BR2_TARGET_ROOTFS_TAR=y
 # BR2_TARGET_ROOTFS_TAR_NONE is not set
-BR2_TARGET_ROOTFS_TAR_GZIP=y
-# BR2_TARGET_ROOTFS_TAR_BZIP2 is not set
+# BR2_TARGET_ROOTFS_TAR_GZIP is not set
+BR2_TARGET_ROOTFS_TAR_BZIP2=y
+# BR2_TARGET_ROOTFS_TAR_LZ4 is not set
 # BR2_TARGET_ROOTFS_TAR_LZMA is not set
 # BR2_TARGET_ROOTFS_TAR_LZO is not set
 # BR2_TARGET_ROOTFS_TAR_XZ is not set
 BR2_TARGET_ROOTFS_TAR_OPTIONS=""
+# BR2_TARGET_ROOTFS_UBI is not set
 # BR2_TARGET_ROOTFS_UBIFS is not set
 # BR2_TARGET_ROOTFS_YAFFS2 is not set
 
@@ -3078,7 +3103,10 @@ BR2_PACKAGE_HOST_UTIL_LINUX=y
 #
 # Legacy options removed in 2018.02
 #
+# BR2_PACKAGE_EEPROG is not set
 # BR2_PACKAGE_GNUPG2_GPGV2 is not set
+# BR2_PACKAGE_IMX_GPU_VIV_APITRACE is not set
+# BR2_PACKAGE_IMX_GPU_VIV_G2D is not set
 
 #
 # Legacy options removed in 2017.11
