@@ -16,6 +16,7 @@
 	(
 		// Users to add ports here
         output wire irq,
+		output wire [7:0] leds,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -49,6 +50,7 @@
 		.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH)
 	) interrupt_demo_v1_0_S_AXI_inst (
 	    .irq(irq),
+	    .leds(leds),
 		.S_AXI_ACLK(s_axi_aclk),
 		.S_AXI_ARESETN(s_axi_aresetn),
 		.S_AXI_AWADDR(s_axi_awaddr),

@@ -16,6 +16,7 @@
 	(
 		// Users to add ports here
         	output wire irq,
+		output wire [7:0] leds,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -110,7 +111,8 @@
 	reg [C_S_AXI_DATA_WIDTH-1:0]	control_reg;
 	reg [C_S_AXI_DATA_WIDTH-1:0]	th_latency;
 	reg [C_S_AXI_DATA_WIDTH-1:0]	bh_latency;
-	
+	reg [C_S_AXI_DATA_WIDTH-1:0]    led_reg;	
+	assign leds=led_reg;
 	wire	 slv_reg_rden;
 	wire	 slv_reg_wren;
 	reg [C_S_AXI_DATA_WIDTH-1:0]	 reg_data_out;
@@ -234,12 +236,18 @@
 	              if ( S_AXI_WSTRB[byte_index] == 1 ) begin
 	                // Respective byte enables are asserted as per write strobes 
 	                // Slave register 0
+	                led_reg[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+	              end  
+		 2'h1:
+	            for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
+	              if ( S_AXI_WSTRB[byte_index] == 1 ) begin
+	                // Respective byte enables are asserted as per write strobes 
+	                // Slave register 1
 	                control_reg[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
 	              end  
-	          default : begin
+          default : begin
+		  	      led_reg <= led_reg;
 	                      control_reg <= control_reg;
-	                      th_latency <= th_latency;
-	                      bh_latency <= bh_latency;
 	                    end
 	        endcase
 	      end
@@ -348,9 +356,10 @@
 	begin
 	      // Address decoding for reading registers
 	      case ( axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] )
-	        2'h0   : reg_data_out <= control_reg;
-	        2'h1   : reg_data_out <= th_latency;
-	        2'h2   : reg_data_out <= bh_latency;
+	        2'h0   : reg_data_out <= led_reg;
+	        2'h1   : reg_data_out <= control_reg;
+	        2'h2   : reg_data_out <= th_latency;
+	        2'h3   : reg_data_out <= bh_latency;
 	        default : reg_data_out <= 0;
 	      endcase
 	end

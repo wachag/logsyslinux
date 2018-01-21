@@ -1,4 +1,4 @@
-&sdcard { 	
+/*&sdcard { 	
   mmc_spi@0 {
     compatible = "mmc-spi-slot";
     spi-max-frequency = < 2000000 >;
@@ -25,6 +25,7 @@
     };
   };
 };
+*/
 &axi_ethernetlite_0 {
   phy-handle = <&phy0>;
 };

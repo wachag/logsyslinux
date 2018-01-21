@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -158,7 +158,7 @@ ARCHITECTURE mainsoc_microblaze_0_axi_intc_0_arch OF mainsoc_microblaze_0_axi_in
   ATTRIBUTE X_INTERFACE_INFO OF processor_rst: SIGNAL IS "xilinx.com:signal:reset:1.0 proc_reset RST";
   ATTRIBUTE X_INTERFACE_PARAMETER OF processor_clk: SIGNAL IS "XIL_INTERFACENAME proc_clock, ASSOCIATED_BUSIF interrupt, ASSOCIATED_RESET processor_rst, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1";
   ATTRIBUTE X_INTERFACE_INFO OF processor_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 proc_clock CLK";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF intr: SIGNAL IS "XIL_INTERFACENAME interrupt_input, SENSITIVITY LEVEL_HIGH:LEVEL_HIGH:EDGE_RISING:EDGE_RISING:LEVEL_HIGH:LEVEL_HIGH:EDGE_RISING:EDGE_RISING, PortWidth 8";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF intr: SIGNAL IS "XIL_INTERFACENAME interrupt_input, SENSITIVITY LEVEL_HIGH:LEVEL_HIGH:EDGE_RISING:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:EDGE_RISING:EDGE_RISING, PortWidth 8";
   ATTRIBUTE X_INTERFACE_INFO OF intr: SIGNAL IS "xilinx.com:signal:interrupt:1.0 interrupt_input INTERRUPT";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_rready: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi RREADY";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_rvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi RVALID";
@@ -191,7 +191,7 @@ BEGIN
       C_S_AXI_DATA_WIDTH => 32,
       C_NUM_INTR_INPUTS => 8,
       C_NUM_SW_INTR => 0,
-      C_KIND_OF_INTR => X"ffffff33",
+      C_KIND_OF_INTR => X"ffffff23",
       C_KIND_OF_EDGE => X"FFFFFFFF",
       C_KIND_OF_LVL => X"FFFFFFFF",
       C_ASYNC_INTR => X"FFFFFF02",

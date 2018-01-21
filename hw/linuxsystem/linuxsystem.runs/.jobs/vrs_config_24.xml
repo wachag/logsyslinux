@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="mainsoc_axi_gpio_0_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_axi_gpio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mainsoc_interrupt_demo_0_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_interrupt_demo_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="mainsoc_axi_gpio_0_0_synth_1"/>
+		<Parent Id="mainsoc_interrupt_demo_0_0_synth_1"/>
+	</Run>
+</Runs>
+

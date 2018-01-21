@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="mainsoc_axi_smc_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_axi_smc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mainsoc_dlmb_v10_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_dlmb_v10_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mainsoc_ilmb_v10_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_ilmb_v10_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="mainsoc_dlmb_v10_0_synth_1"/>
+	</Run>
+	<Run Id="mainsoc_rst_mig_7series_0_200M_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_rst_mig_7series_0_200M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mainsoc_axi_gpio_0_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_axi_gpio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mainsoc_clk_wiz_0_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_clk_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mainsoc_axi_gpio_1_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_axi_gpio_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mainsoc_axi_uartlite_0_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_axi_uartlite_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mainsoc_mig_7series_0_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_mig_7series_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mainsoc_rgmii_to_mii_0_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_rgmii_to_mii_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mainsoc_mdm_1_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_mdm_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mainsoc_microblaze_0_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_microblaze_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mainsoc_rst_clk_wiz_0_150M_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_rst_clk_wiz_0_150M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mainsoc_interrupt_demo_0_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_interrupt_demo_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mainsoc_axi_quad_spi_0_1_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_axi_quad_spi_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mainsoc_dlmb_bram_if_cntlr_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_dlmb_bram_if_cntlr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mainsoc_lmb_bram_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_lmb_bram_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mainsoc_ilmb_bram_if_cntlr_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_ilmb_bram_if_cntlr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mainsoc_microblaze_0_axi_intc_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_microblaze_0_axi_intc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mainsoc_microblaze_0_xlconcat_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_microblaze_0_xlconcat_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mainsoc_xbar_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mainsoc_axi_timer_0_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_axi_timer_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mainsoc_axi_ethernetlite_0_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_axi_ethernetlite_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mainsoc_logsys_axi_spi_0_0_synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/mainsoc_logsys_axi_spi_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="mainsoc_axi_smc_0_synth_1"/>
+		<Parent Id="mainsoc_dlmb_v10_0_synth_1"/>
+		<Parent Id="mainsoc_ilmb_v10_0_synth_1"/>
+		<Parent Id="mainsoc_rst_mig_7series_0_200M_0_synth_1"/>
+		<Parent Id="mainsoc_axi_gpio_0_0_synth_1"/>
+		<Parent Id="mainsoc_clk_wiz_0_0_synth_1"/>
+		<Parent Id="mainsoc_axi_gpio_1_0_synth_1"/>
+		<Parent Id="mainsoc_axi_uartlite_0_0_synth_1"/>
+		<Parent Id="mainsoc_mig_7series_0_0_synth_1"/>
+		<Parent Id="mainsoc_rgmii_to_mii_0_0_synth_1"/>
+		<Parent Id="mainsoc_mdm_1_0_synth_1"/>
+		<Parent Id="mainsoc_microblaze_0_0_synth_1"/>
+		<Parent Id="mainsoc_rst_clk_wiz_0_150M_0_synth_1"/>
+		<Parent Id="mainsoc_interrupt_demo_0_0_synth_1"/>
+		<Parent Id="mainsoc_axi_quad_spi_0_1_synth_1"/>
+		<Parent Id="mainsoc_dlmb_bram_if_cntlr_0_synth_1"/>
+		<Parent Id="mainsoc_lmb_bram_0_synth_1"/>
+		<Parent Id="mainsoc_ilmb_bram_if_cntlr_0_synth_1"/>
+		<Parent Id="mainsoc_microblaze_0_axi_intc_0_synth_1"/>
+		<Parent Id="mainsoc_microblaze_0_xlconcat_0_synth_1"/>
+		<Parent Id="mainsoc_xbar_0_synth_1"/>
+		<Parent Id="mainsoc_axi_timer_0_0_synth_1"/>
+		<Parent Id="mainsoc_axi_ethernetlite_0_0_synth_1"/>
+		<Parent Id="mainsoc_logsys_axi_spi_0_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/home/wachag/Projects/kintex7/linux/hw/linuxsystem/linuxsystem.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="post_route_phys_opt_design">
+		<Parent Id="synth_1"/>
+		<Parent Id="mainsoc_axi_smc_0_synth_1"/>
+		<Parent Id="mainsoc_dlmb_v10_0_synth_1"/>
+		<Parent Id="mainsoc_ilmb_v10_0_synth_1"/>
+		<Parent Id="mainsoc_rst_mig_7series_0_200M_0_synth_1"/>
+		<Parent Id="mainsoc_axi_gpio_0_0_synth_1"/>
+		<Parent Id="mainsoc_clk_wiz_0_0_synth_1"/>
+		<Parent Id="mainsoc_axi_gpio_1_0_synth_1"/>
+		<Parent Id="mainsoc_axi_uartlite_0_0_synth_1"/>
+		<Parent Id="mainsoc_mig_7series_0_0_synth_1"/>
+		<Parent Id="mainsoc_rgmii_to_mii_0_0_synth_1"/>
+		<Parent Id="mainsoc_mdm_1_0_synth_1"/>
+		<Parent Id="mainsoc_microblaze_0_0_synth_1"/>
+		<Parent Id="mainsoc_rst_clk_wiz_0_150M_0_synth_1"/>
+		<Parent Id="mainsoc_interrupt_demo_0_0_synth_1"/>
+		<Parent Id="mainsoc_axi_quad_spi_0_1_synth_1"/>
+		<Parent Id="mainsoc_dlmb_bram_if_cntlr_0_synth_1"/>
+		<Parent Id="mainsoc_lmb_bram_0_synth_1"/>
+		<Parent Id="mainsoc_ilmb_bram_if_cntlr_0_synth_1"/>
+		<Parent Id="mainsoc_microblaze_0_axi_intc_0_synth_1"/>
+		<Parent Id="mainsoc_microblaze_0_xlconcat_0_synth_1"/>
+		<Parent Id="mainsoc_xbar_0_synth_1"/>
+		<Parent Id="mainsoc_axi_timer_0_0_synth_1"/>
+		<Parent Id="mainsoc_axi_ethernetlite_0_0_synth_1"/>
+		<Parent Id="mainsoc_logsys_axi_spi_0_0_synth_1"/>
+	</Run>
+</Runs>
+

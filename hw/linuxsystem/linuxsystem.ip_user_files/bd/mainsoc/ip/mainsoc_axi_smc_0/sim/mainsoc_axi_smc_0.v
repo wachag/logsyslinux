@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -140,7 +140,7 @@ module mainsoc_axi_smc_0 (
   M00_AXI_rready
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.aclk, FREQ_HZ 200000000, PHASE 0, CLK_DOMAIN mainsoc_mig_7series_0_0_ui_clk, ASSOCIATED_BUSIF M00_AXI, ASSOCIATED_CLKEN s_sc_aclken" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.aclk, FREQ_HZ 200000000, PHASE 0, CLK_DOMAIN mainsoc_mig_7series_0_0_ui_clk, ASSOCIATED_BUSIF M00_AXI, ASSOCIATED_CLKEN m_sc_aclken" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.aclk CLK" *)
 input wire aclk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.aclk1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, ASSOCIATED_BUSIF S00_AXI:S01_AXI, ASSOCIATED_CLKEN m_sc_aclken" *)
