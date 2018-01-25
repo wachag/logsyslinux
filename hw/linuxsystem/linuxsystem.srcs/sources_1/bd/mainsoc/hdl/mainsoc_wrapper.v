@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
-//Date        : Sun Jan 21 12:58:46 2018
+//Date        : Sun Jan 21 13:20:33 2018
 //Host        : dreadnought running 64-bit Arch Linux
 //Command     : generate_target mainsoc_wrapper.bd
 //Design      : mainsoc_wrapper

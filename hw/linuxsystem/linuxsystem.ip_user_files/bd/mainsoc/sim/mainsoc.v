@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
-//Date        : Sun Jan 21 08:17:18 2018
+//Date        : Sun Jan 21 13:20:33 2018
 //Host        : dreadnought running 64-bit Arch Linux
 //Command     : generate_target mainsoc.bd
 //Design      : mainsoc
@@ -1265,6 +1265,7 @@ module mainsoc
     flash_spi_ss_o,
     flash_spi_ss_t,
     led_24bits_tri_o,
+    leds_0,
     mdio_rtl_mdc,
     mdio_rtl_mdio_i,
     mdio_rtl_mdio_o,
@@ -1315,7 +1316,8 @@ module mainsoc
   (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 flash_spi SS_I" *) input [0:0]flash_spi_ss_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 flash_spi SS_O" *) output [0:0]flash_spi_ss_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:spi:1.0 flash_spi SS_T" *) output flash_spi_ss_t;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_24bits TRI_O" *) output [23:0]led_24bits_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 led_24bits TRI_O" *) output [15:0]led_24bits_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.LEDS_0 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.LEDS_0, LAYERED_METADATA undef" *) output [7:0]leds_0;
   (* X_INTERFACE_INFO = "xilinx.com:interface:mdio:1.0 mdio_rtl MDC" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME mdio_rtl, CAN_DEBUG false" *) output mdio_rtl_mdc;
   (* X_INTERFACE_INFO = "xilinx.com:interface:mdio:1.0 mdio_rtl MDIO_I" *) input mdio_rtl_mdio_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:mdio:1.0 mdio_rtl MDIO_O" *) output mdio_rtl_mdio_o;
@@ -1345,7 +1347,7 @@ module mainsoc
   wire axi_ethernetlite_0_MII_TX_CLK;
   wire axi_ethernetlite_0_MII_TX_EN;
   wire axi_ethernetlite_0_ip2intc_irpt;
-  wire [23:0]axi_gpio_0_GPIO_TRI_O;
+  wire [15:0]axi_gpio_0_GPIO_TRI_O;
   wire axi_gpio_0_ip2intc_irpt;
   wire [7:0]axi_gpio_1_GPIO2_TRI_I;
   wire [3:0]axi_gpio_1_GPIO_TRI_I;
@@ -1406,6 +1408,7 @@ module mainsoc
   wire flash_SPI_0_SS_T;
   wire flash_ip2intc_irpt;
   wire interrupt_demo_0_irq;
+  wire [7:0]interrupt_demo_0_leds;
   wire logsys_axi_spi_0_irq;
   wire mdm_1_debug_sys_rst;
   wire microblaze_0_Clk;
@@ -1735,7 +1738,8 @@ module mainsoc
   assign flash_spi_io3_t = flash_SPI_0_IO3_T;
   assign flash_spi_ss_o[0] = flash_SPI_0_SS_O;
   assign flash_spi_ss_t = flash_SPI_0_SS_T;
-  assign led_24bits_tri_o[23:0] = axi_gpio_0_GPIO_TRI_O;
+  assign led_24bits_tri_o[15:0] = axi_gpio_0_GPIO_TRI_O;
+  assign leds_0[7:0] = interrupt_demo_0_leds;
   assign mdio_rtl_mdc = axi_ethernetlite_0_MDIO_MDC;
   assign mdio_rtl_mdio_o = axi_ethernetlite_0_MDIO_MDIO_O;
   assign mdio_rtl_mdio_t = axi_ethernetlite_0_MDIO_MDIO_T;
@@ -2006,6 +2010,7 @@ module mainsoc
         .ss_t(flash_SPI_0_SS_T));
   mainsoc_interrupt_demo_0_0 interrupt_demo_0
        (.irq(interrupt_demo_0_irq),
+        .leds(interrupt_demo_0_leds),
         .s_axi_aclk(microblaze_0_Clk),
         .s_axi_araddr(microblaze_0_axi_periph_M06_AXI_ARADDR[3:0]),
         .s_axi_aresetn(rst_clk_wiz_0_150M_peripheral_aresetn),
